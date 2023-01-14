@@ -434,7 +434,7 @@ h1{
     padding: 15px 0 0 10px;
     
 }
-.sponsors-logo{
+.sponsors-logos{
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
@@ -442,6 +442,10 @@ h1{
 .sponsors-logo img{
     width: 135px;
     height: 40px;
+    transition: 0.5s;
+}
+.sponsors-logo:hover img{
+    transform: rotate(-30deg);
 }
 /* Our sponsors responsive*/
 @media  only screen and (max-width:576px) {
@@ -466,13 +470,18 @@ h1{
         width: 90%;
         
     }
-    .sponsors-logo{
-        display: grid;
-        margin: auto;
+    .sponsors-logos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 25px;
     }
     .sponsors-logo img{
         width: 135px;
         height: 40px;
+    }
+    .sponsors-logo:hover img{
+        transform: rotate(-30deg);
     }
 }
 /* Contact us */
