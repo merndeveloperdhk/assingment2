@@ -74,7 +74,8 @@ h1{
     text-align: center;
 }
 .archi-description h1{
-    font-size: 54px;
+    margin-top: 80px;
+    font-size: 45px;
     font-weight: 700;
 }
 .archi-description p{
@@ -523,6 +524,10 @@ width: 80%;
     border: none;
     border-radius: 5px;
     background-color: #ff900e;
+    transition: 0.5s;
+}
+.form-btn:hover{
+    background-color: #ff8f0ea4;
 }
 /* Contact us  Responsive */
 @media only screen and (max-width:576px){
@@ -570,8 +575,9 @@ width: 80%;
         border: none;
         border-radius: 5px;
         background-color: #ff900e;
-    }
+    }   
 }
+
 /* footer */
 footer{
     width: 80%;
