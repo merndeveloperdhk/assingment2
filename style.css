@@ -9,12 +9,19 @@
 h1{
     font-weight: 700;
 }
+:root{
+    --button-bg-color:#ff900e;
+    --hover-bg-color:#0074ab;
+    --bg-color-light:#fff4e7;
+    --hover-text-color:black;
+    
+}
 
 /* Header start here */
 .header{
     margin: auto;
-    background-color: #fff4e7;
-    position: relative;
+    background-color: var(--bg-color-light);
+    
 }
 .menu-bar{
     width: 100%;
@@ -23,11 +30,7 @@ h1{
     justify-content: space-between;
     padding: 20px 130px;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #7fbfe3;
-    z-index: 999;
+    
 
 }
 .menu ul{
@@ -49,17 +52,13 @@ h1{
 /* menu responsive */
 @media only screen and (max-width:576px) {
     .menu-bar{
-        width: 100%;
+        width: 50%;
         margin: auto;
         display: flex;
         justify-content: space-between;
         padding: 10px 10px;
         align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: #7fbfe3;
-        z-index: 999;
+        
     
     }
     .menu ul li{
@@ -74,7 +73,7 @@ h1{
     text-align: center;
 }
 .archi-description h1{
-    margin-top: 80px;
+    padding-top: 50px;
     font-size: 45px;
     font-weight: 700;
 }
@@ -84,7 +83,7 @@ h1{
     line-height: 25px;
 }
 .archi-description button{
-    background-color: #ff900e;
+    background-color: var(--button-bg-color);
     border: none;
     border-radius: 5px;
     margin-bottom: 25px;
@@ -98,11 +97,11 @@ h1{
     transition: 0.5s;
 }
 .archi-description button:hover{
-    background-color: white; 
+    background-color: var(--hover-bg-color); 
 }
 .archi-description button:hover a{
-    color: black;
-    font-weight: bold;
+    color: var(--hover-text-color);
+    
 }
 /* Architect description responsive */
 @media only screen and (max-width:576px) {
@@ -122,7 +121,7 @@ h1{
         text-align: center;
     }
     .archi-description button{
-        background-color: #ff900e;
+        background-color: var(--button-bg-color);
         border: none;
         border-radius: 5px;
         margin-bottom: 25px;
@@ -197,17 +196,19 @@ h1{
     line-height: 25px;
 }
 .features-description button{
-    background-color: #ff900e;
+    background-color: var(--button-bg-color);
     border: none;
     border-radius: 5px;
     margin-bottom: 25px;
     transition: 0.5s;
 }
 .features-description button:hover{
-    background-color: white;  
-}
+    background-color: var(--hover-bg-color); 
+    color: var(--hover-text-color);
+};  
+
 .features-description button:hover a{
-    color: black; 
+    color: var(--hover-text-color);
 }
 .features-description button a{
     text-decoration: none;
@@ -255,7 +256,9 @@ h1{
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
+    
 }
+
 .features-details{
     width: 50%;
     display: grid;
@@ -279,7 +282,8 @@ h1{
 }
 .features-description-foot{
     width: 80%;
-    background-color: whitesmoke;
+    background-color: var(--bg-color-light);
+
 }
 .fratures-discription{
     padding: 10px;
@@ -296,6 +300,7 @@ h1{
 }
 .featured-image{
     width: 50%;
+    
 }
 
 .featured-image img {
@@ -311,11 +316,80 @@ h1{
    transform: scale(1.1);
 }
 .features-btn{
-    background-color: #ff900e;
+    background-color: var(--button-bg-color);
     border: 0;
 }
 .features-btn a{
     padding: 12px 20px;
+}
+/* extra button here */
+.extra-button{
+    position: relative;
+}
+.extra-btn {
+    position: absolute;
+    top: 650px;
+    left: 594px; 
+}
+.extra-btn button{
+    border: none;
+}
+
+.extra-btn a{
+    text-decoration: none;
+    padding: 20px 30px;
+    display: block;
+    background-color:var(--button-bg-color);
+    font-size: 35px;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.extra-btn a:hover{
+    background-color: var(--hover-bg-color);
+    color: var(--hover-text-color);
+}
+.experi{
+    font-size: 20px;
+    font-weight: normal;
+}
+/* extra button responsive */
+@media only screen and (max-width:576px) {
+    .extra-button{
+        position: relative;
+        margin-bottom: 15px;
+    }
+    .extra-btn {
+        position: absolute;
+        top: 1030px;
+        left: 120px; 
+    }
+    .extra-btn button{
+        border: none;
+        
+    }
+    
+    .extra-btn a{
+        text-decoration: none;
+        padding: 12px 22px;
+        display: block;
+        background-color: #ff900e;
+        font-size: 20px;
+        color: white;
+        font-weight: 700;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+    .extra-btn a:hover{
+        background-color: black;
+        color: #3b97d3;
+    }
+    .experi{
+        font-size: 15px;
+        font-weight: normal;
+    }
+    
 }
 /* Features enjoy responsive*/
 @media only screen and (max-width:576px) {
@@ -341,7 +415,7 @@ h1{
     }
     .features-description-foot{
         width: 100%;
-        background-color: whitesmoke;
+        background-color: var(--bg-color-light);
     }
     .featured-image img {
         width: 100%;
@@ -523,12 +597,13 @@ width: 80%;
     margin-top: 15px;
     border: none;
     border-radius: 5px;
-    background-color: #ff900e;
+    background-color: var(--button-bg-color);
     transition: 0.5s;
 }
 .form-btn:hover{
-    background-color: #ff8f0ea4;
-}
+    background-color: var(--hover-bg-color); 
+};
+
 /* Contact us  Responsive */
 @media only screen and (max-width:576px){
     .contact-us{
@@ -536,14 +611,14 @@ width: 80%;
         margin: auto;
         display: flex;
         flex-direction: column;  
-        justify-content: center;    
+        
     }
     .map{
         width: 100%;
         padding: 15px 0;
         border-radius: 5px;
         margin: auto;
-        
+         
     }
     .contact-form{
     width: 100%;
@@ -583,9 +658,9 @@ footer{
     width: 80%;
     background-color: #fff4e7;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     margin-top: 50px;
-    
+    border-radius: 5px;
 }
 footer p{
     text-align: center;
